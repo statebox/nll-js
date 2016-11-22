@@ -1,0 +1,16 @@
+{
+  "name": "varint-list",
+  "version": "1.0.0",
+  "description": "Decode list of numbers a concatenated varints",
+  "main": "varint-list.js",
+  "scripts": {
+  },
+  "keywords": [
+    "varint"
+  ],
+  "author": "Jelle 'wires' Herold <jelle@defekt.nl>",
+  "license": "MIT",
+  "dependencies": {
+    "varint": "^5.0.0"
+  }
+}
