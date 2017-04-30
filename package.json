@@ -4,6 +4,7 @@
   "description": "Decode list of numbers a concatenated varints",
   "main": "varint-list.js",
   "scripts": {
+    "test": "node test/test.js"
   },
   "keywords": [
     "varint"
@@ -11,6 +12,10 @@
   "author": "Jelle 'wires' Herold <jelle@defekt.nl>",
   "license": "MIT",
   "dependencies": {
-    "varint": "^5.0.0"
+    "signed-varint": "^2.0.1"
+  },
+  "devDependencies": {
+    "jsverify": "^0.8.2",
+    "ramda": "^0.23.0"
   }
 }
