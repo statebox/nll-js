@@ -1,5 +1,5 @@
-const jsc = require("jsverify");
-const varints = require('../varint-list.js')
+const jsc = require('jsverify')
+const varints = require('../index.js')
 const R = require('ramda')
 
 const isIdentity = jsc
@@ -9,5 +9,4 @@ const isIdentity = jsc
 		return R.equals(d, nats)
 	})
 
-
-jsc.assert(isIdentity);
+jsc.assert(isIdentity)

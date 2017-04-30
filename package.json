@@ -2,12 +2,13 @@
   "name": "varints",
   "version": "1.0.0",
   "description": "Decode list of numbers a concatenated varints",
-  "main": "varint-list.js",
+  "main": "varints.js",
   "scripts": {
     "test": "node test/test.js"
   },
   "keywords": [
-    "varint", "list"
+    "varint",
+    "list"
   ],
   "author": "Jelle 'wires' Herold <jelle@defekt.nl>",
   "license": "MIT",
