@@ -1,4 +1,13 @@
+[![Build
+Status](https://travis-ci.org/statebox/varint-list.svg?branch=master)](https://travis-ci.org/statebox/varint-list)
+
 # Encode numbers as list of varints
+
+Encodes non-empty lists of integers into a `Buffer` using
+signed-varint encoding (positive => even numbers, negative uneven
+numbers).
+
+## Usage
 
 Import library
 
@@ -10,7 +19,7 @@ const lvi = require('varint-list')
 Encode
 
 ```js
-const b = lvi.encode([1,2,3,0, 4])
+const b = lvi.encode([1,2,3,0,4])
 //=> <Buffer 01 02 03 00 04>
 ```
 
