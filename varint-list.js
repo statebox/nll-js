@@ -1,8 +1,16 @@
 var varint = require('signed-varint')
 
-const concata = (a0,a1) => a0.concat(a1)
+function concata (a0, a1) {
+	return a0.concat(a1)
+}
 
-const isEmptyList = l => !(l && l.length > 0)
+function isEmptyList (l) {
+	return !(l && l.length > 0)
+}
+
+function encode (n) {
+	return varint.encode(n)
+}
 
 exports.encode = function (listOfNumbers) {
 	
@@ -10,14 +18,14 @@ exports.encode = function (listOfNumbers) {
 		throw new Error('must pass non empty list of numbers')
 	}
 
-	listOfNumbers.forEach(n => {
+	listOfNumbers.forEach(function (n) {
 		if (typeof n !== 'number') {
 			throw new Error('must pass list of numbers, `' + n + '` is not a number')
 		}
 	})
 
 	const bytes = listOfNumbers
-		.map(n => new varint.encode(n))
+		.map(encode)
 		.reduce(concata)
 	return new Buffer(bytes)
 }
