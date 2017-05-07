@@ -1,5 +1,6 @@
 [![Build
-Status](https://travis-ci.org/statebox/varint-list.svg?branch=master)](https://travis-ci.org/statebox/varint-list)
+Status](https://travis-ci.org/statebox/varint-list.svg?branch=master)](https://travis-ci.org/statebox/varint-list) [![PRs
+Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 # NLL-JS
 
