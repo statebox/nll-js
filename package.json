@@ -1,10 +1,10 @@
 {
-  "name": "varints",
+  "name": "nll-js",
   "version": "1.0.0",
-  "description": "Decode list of numbers a concatenated varints",
-  "main": "varints.js",
+  "description": "codec for list of lists of numbers",
+  "main": "index.js",
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node_modules/.bin/tape test/*.js"
   },
   "keywords": [
     "varint",
@@ -13,10 +13,10 @@
   "author": "Jelle 'wires' Herold <jelle@defekt.nl>",
   "license": "MIT",
   "dependencies": {
-    "signed-varint": "^2.0.1"
+    "signed-varint": "^2.0.1",
+    "varint": "^5.0.0"
   },
   "devDependencies": {
-    "jsverify": "^0.8.2",
-    "ramda": "^0.23.0"
+    "chape": "^0.1.1"
   }
 }

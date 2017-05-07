@@ -1,31 +1,31 @@
 [![Build
 Status](https://travis-ci.org/statebox/varint-list.svg?branch=master)](https://travis-ci.org/statebox/varint-list)
 
-# Encode numbers as list of varints
+# NLL-JS
 
-Encodes non-empty lists of integers into a `Buffer` using
-signed-varint encoding (positive => even numbers, negative uneven
-numbers).
+Encodes list of lists of integers into a `Buffer` according to
+https://github.com/statebox/nll-spec
 
 ## Usage
 
 Import library
 
 ```js
-const lvi = require('varint-list')
-//=> { encode: [Function], decode: [Function] }
+const nll = require('nll')
+//=> { encode: [[number]] -> Buffer,
+//     decode: Buffer -> [[number]] }
 ```
 
 Encode
 
 ```js
-const b = lvi.encode([1,2,3,0,4])
-//=> <Buffer 01 02 03 00 04>
+> b = nll.encode([[-1],[0],[],[1]])
+//=> <Buffer 0f 00 01 00 02 00 00 04>
 ```
 
 Decode
 
 ```js
-> lvi.decode(b)
-[ 1, 2, 3, 0, 4 ]
+> n.decode(b)
+[ [ -1 ], [ 0 ], [], [ 1 ] ]
 ```
