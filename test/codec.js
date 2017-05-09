@@ -1,5 +1,6 @@
-const test = require('chape').test
-const jsc = require('chape').jsc
+const check = require('chape')
+const test = require('tape').test
+const jsc = require('jsverify')
 
 const u = require('./util.js')
 const nll = require('..')
@@ -8,7 +9,7 @@ const codec = u.comp(nll.decode, nll.encode)
 const property = u.is_identity(codec)
 
 test('codec, dec ∘ enc = id', function (t) {
-	t.check(jsc.forall('nearray (nearray integer)', property))
+	check(jsc.forall('nearray (nearray integer)', property), t)
 	t.end()
 })
 

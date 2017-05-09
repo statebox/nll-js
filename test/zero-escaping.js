@@ -1,5 +1,6 @@
-const test = require('chape').test
-const jsc = require('chape').jsc
+const test = require('tape').test
+const check = require('chape')
+const jsc = require('jsverify')
 const u = require('./util.js')
 const z = require('../zero-escaping.js')
 
@@ -8,8 +9,7 @@ const zero_free = function (n) {
 }
 
 test('zero escaping, ∀x. 0 ∉ enc(x)', function (t) {
-	const prop = jsc.forall('integer', zero_free)
-	t.check(prop)
+	check(jsc.forall('integer', zero_free), t)
 	t.end()
 })
 

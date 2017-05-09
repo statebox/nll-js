@@ -1,4 +1,4 @@
-const deepEQ = require('chape').jsc.utils.isEqual
+const deepEQ = require('jsverify').utils.isEqual
 
 exports.comp = function (G, F) {
 	return function (x) {
