@@ -1,6 +1,6 @@
 {
-  "name": "nll-js",
-  "version": "1.0.0",
+  "name": "nll",
+  "version": "1.0.1",
   "description": "codec for list of lists of numbers",
   "main": "index.js",
   "scripts": {

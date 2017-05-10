@@ -17,7 +17,7 @@ test(
 	'codec, dec ∘ enc = id',
 	check(
 		'nearray (nearray integer)',
-		(t, x) => {
+		function (t, x) {
 			t.deepEqual(x, codec(x))
 		},
 		options

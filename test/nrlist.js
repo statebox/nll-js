@@ -17,7 +17,7 @@ test(
 	'decode ∘ encode = identity',
 	check(
 		'array integer',
-		(t, x) => {
+		function (t, x) {
 			t.deepEqual(x, codec(x))
 		},
 		options
