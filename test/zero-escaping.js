@@ -11,7 +11,7 @@ const zero_free = function (n) {
 
 test(
   'zero escaping, ∀x. 0 ∉ enc(x)',
-  check(jsc.integer, (t, x) => {
+  check(jsc.integer, function (t, x) {
     t.true(zero_free(x))
   })
 )
@@ -19,7 +19,7 @@ test(
 const is_id = u.is_identity(u.comp(z.dec, z.enc))
 test(
   'zero escaping, ∀x. 0 ∉ enc(x)',
-  check(jsc.integer, (t, x) => {
+  check(jsc.integer, function (t, x) {
     t.true(is_id(x))
   })
 )
